@@ -7,7 +7,7 @@ import StoreButtons from '@/components/StoreButtons'
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
 })
 
 export default function Hero() {
@@ -20,7 +20,7 @@ export default function Hero() {
           className="order-2 md:order-1 md:-ml-16 md:-my-24"
           initial={{ opacity: 0, x: -40, scale: 0.95 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
         >
           <Image
             src="/phone-mockup.png"

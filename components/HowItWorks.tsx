@@ -29,7 +29,7 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
             >
               <span
                 className="absolute -top-4 left-0 text-8xl font-black leading-none select-none text-brand-blue/10"
