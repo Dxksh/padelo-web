@@ -7,15 +7,17 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         {/* Phone mockup column */}
-        <div className="relative flex justify-center order-2 md:order-1">
-          <Image
-            src="/phone-mockup.png"
-            alt="Padelo app screenshots"
-            width={1920}
-            height={1920}
-            className="w-full drop-shadow-2xl"
-            priority
-          />
+        <div className="order-2 md:order-1">
+          <div className="bg-brand-light rounded-3xl overflow-hidden p-6">
+            <Image
+              src="/phone-mockup.png"
+              alt="Padelo app screenshots"
+              width={1920}
+              height={1920}
+              className="w-full"
+              priority
+            />
+          </div>
         </div>
 
         {/* Text + CTA column */}
