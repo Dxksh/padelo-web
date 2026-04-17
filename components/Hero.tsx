@@ -6,18 +6,14 @@ export default function Hero() {
     <section className="bg-white py-16 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        {/* Phone mockup column — bold blue geometric block behind phone */}
+        {/* Phone mockup column — two phones side by side */}
         <div className="relative flex justify-center order-2 md:order-1 py-8">
-          {/* Solid brand-blue geometric block — bold rectangle, slightly tilted for energy */}
-          <div className="absolute inset-y-4 left-1/2 -translate-x-1/2 w-56 bg-brand-blue rounded-3xl -z-10 rotate-3" />
-          {/* Secondary accent: a smaller, darker offset block for depth */}
-          <div className="absolute inset-y-8 left-1/2 -translate-x-[55%] w-52 bg-gray-900 rounded-3xl -z-20 -rotate-2 opacity-10" />
           <Image
             src="/phone-mockup.png"
-            alt="Padelo app screenshot"
-            width={280}
-            height={560}
-            className="relative z-10 drop-shadow-2xl"
+            alt="Padelo app screenshots"
+            width={560}
+            height={480}
+            className="w-full max-w-lg drop-shadow-2xl"
             priority
           />
         </div>
