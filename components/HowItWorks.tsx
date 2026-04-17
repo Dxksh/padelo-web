@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 const steps = [
   { number: '01', title: 'Create', desc: 'Start a match or tournament in seconds.' },
   { number: '02', title: 'Score', desc: 'Enter points live as you play.' },
@@ -8,10 +12,25 @@ export default function HowItWorks() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-gray-900 mb-16 text-center">How it works</h2>
+        <motion.h2
+          className="text-3xl font-bold text-gray-900 mb-16 text-center"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          How it works
+        </motion.h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {steps.map(({ number, title, desc }) => (
-            <div key={title} className="relative">
+          {steps.map(({ number, title, desc }, i) => (
+            <motion.div
+              key={title}
+              className="relative"
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+            >
               <span
                 className="absolute -top-4 left-0 text-8xl font-black leading-none select-none text-brand-blue/10"
                 aria-hidden="true"
@@ -22,7 +41,7 @@ export default function HowItWorks() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
                 <p className="text-gray-500 leading-relaxed">{desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

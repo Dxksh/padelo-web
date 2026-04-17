@@ -14,8 +14,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center">
         <Link href="/" className="flex items-center gap-2 cursor-pointer">
-          <LogoIcon />
-          <span className="font-bold text-lg text-gray-900">Padelo</span>
+          <span className="font-bold text-lg text-brand-blue">Padelo.</span>
         </Link>
       </div>
     </nav>
