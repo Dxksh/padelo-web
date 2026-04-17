@@ -6,14 +6,14 @@ export default function Hero() {
     <section className="bg-white py-16 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        {/* Phone mockup column — two phones side by side */}
-        <div className="relative flex justify-center order-2 md:order-1 py-8">
+        {/* Phone mockup column */}
+        <div className="relative flex justify-center order-2 md:order-1">
           <Image
             src="/phone-mockup.png"
             alt="Padelo app screenshots"
-            width={560}
-            height={480}
-            className="w-full max-w-lg drop-shadow-2xl"
+            width={1920}
+            height={1920}
+            className="w-full drop-shadow-2xl"
             priority
           />
         </div>
